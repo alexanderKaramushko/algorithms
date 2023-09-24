@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// LIFO
+// todo протестировать потреблении памяти
 class Stack
 {
 private:
@@ -39,8 +41,6 @@ public:
 
     items[size] = number;
     size++;
-
-    // протестировать потреблении памяти
   }
 
   void Pop()
@@ -51,5 +51,10 @@ public:
   int Peek()
   {
     return items[size - 1];
+  }
+
+  int Size()
+  {
+    return size;
   }
 };
