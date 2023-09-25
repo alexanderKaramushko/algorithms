@@ -43,9 +43,14 @@ public:
     size++;
   }
 
-  void Pop()
+  int Pop()
   {
-    size--;
+    if (size > 0)
+    {
+      size--;
+    }
+
+    return items[size];
   }
 
   int Peek()
@@ -55,6 +60,6 @@ public:
 
   int Size()
   {
-    return size;
+    return size + 1;
   }
 };
